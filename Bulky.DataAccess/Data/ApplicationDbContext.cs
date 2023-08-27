@@ -14,6 +14,7 @@ namespace Bulky.DataAccess.Data
         public DbSet<Category> Categories { get; set; }
 		public DbSet<Product> Products { get; set; }
 		public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+		public DbSet<Company> Companies { get; set; }
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 			base.OnModelCreating(modelBuilder);
@@ -110,6 +111,25 @@ namespace Bulky.DataAccess.Data
 					ImageUrl = ""
 				}
 				);
-		}
+
+			modelBuilder.Entity<Company>().HasData(
+				new Company
+				{
+					Id = 1,
+					Name = "OnlyForge",
+					StreetAddress = "1 Rue du président",
+					City = "Paris",
+					State = "Ile De France",
+					PostalCode = "75001",
+					PhoneNumber = "0123456789",
+
+				},
+				new Company
+				{
+					Id = 2,
+					Name = "SARLlinger",
+				}
+				);
+        }
 	}
 }
