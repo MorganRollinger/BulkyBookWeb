@@ -13,7 +13,7 @@ function Delete(url) {
             $.ajax({
                 url: url
             })
-            location.reload();
+location.reload()
         }
     })
 }
