@@ -362,3 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /BulkyWeb/appsettings.json
+/BulkyWeb/appsettings.Production.json
+/BulkyWeb/appsettings.Development.json
